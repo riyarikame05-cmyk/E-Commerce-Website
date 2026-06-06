@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Quick cart</h1>
+        <div class="search-box">
+<input type="text" id="searchInput" placeholder="Search Products..." onkeyup="searchProducts()">
+</div>
+        <div class="cart">
+            Cart: <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <section class="products">
+
+        <div class="product">
+
+    <img src="Sports T-Shirt.jpg" alt="Sports T-Shirt">
+
+    <h3>Sports T-Shirt</h3>
+
+    <p class="old-price">₹3999</p>
+    <p class="new-price">₹2499</p>
+
+    <span class="discount">30% OFF</span>
+
+    <div class="btn-group">
+        <button onclick="addToCart('Sports T-Shirt')">Add to Cart</button>
+        <button onclick="removeFromCart('Sports T-Shirt')">Remove</button>
+    </div>
+
+    <button class="wishlist" onclick="addWishlist()">
+        ❤️ Wishlist
+    </button>
+
+    <div class="rating" data-product="Sports T-Shirt">
+        <span onclick="rateProduct(this,1)">☆</span>
+        <span onclick="rateProduct(this,2)">☆</span>
+        <span onclick="rateProduct(this,3)">☆</span>
+        <span onclick="rateProduct(this,4)">☆</span>
+        <span onclick="rateProduct(this,5)">☆</span>
+
+        <p class="rating-text">Rate this product</p>
+    </div>
+
+</div>
+
+    <div class="product">
+
+    <img src="Jersey T-Shirt.jpg" alt="T-Shirt">
+
+    <h3>Jersey T-Shirt</h3>
+
+    <p class="old-price">₹2999</p>
+    <p class="new-price">₹1499</p>
+
+    <span class="discount">40% OFF</span>
+
+    <div class="btn-group">
+        <button onclick="addToCart('Jersey T-Shirt')">Add to Cart</button>
+        <button onclick="removeFromCart('Jersey-Shirt')">Remove</button>
+    </div>
+
+    <button class="wishlist" onclick="addWishlist()">
+        ❤️ Wishlist
+    </button>
+
+    <div class="rating" data-product="Jersey T-Shirt">
+        <span onclick="rateProduct(this,1)">☆</span>
+        <span onclick="rateProduct(this,2)">☆</span>
+        <span onclick="rateProduct(this,3)">☆</span>
+        <span onclick="rateProduct(this,4)">☆</span>
+        <span onclick="rateProduct(this,5)">☆</span>
+
+        <p class="rating-text">Rate this product</p>
+    </div>
+
+</div>
+
+       <div class="product">
+
+    <img src="Smart Watch.jpg" alt="Shoes">
+
+    <h3>Smart Watch</h3>
+
+    <p class="old-price">₹4999</p>
+    <p class="new-price">₹3999</p>
+
+    <span class="discount">10% OFF</span>
+
+    <div class="btn-group">
+        <button onclick="addToCart('Smart Watch')">Add to Cart</button>
+        <button onclick="removeFromCart('Smart Watch')">Remove</button>
+    </div>
+
+    <button class="wishlist" onclick="addWishlist()">
+        ❤️ Wishlist
+    </button>
+
+    <div class="rating" data-product="Smart Watch">
+        <span onclick="rateProduct(this,1)">☆</span>
+        <span onclick="rateProduct(this,2)">☆</span>
+        <span onclick="rateProduct(this,3)">☆</span>
+        <span onclick="rateProduct(this,4)">☆</span>
+        <span onclick="rateProduct(this,5)">☆</span>
+
+        <p class="rating-text">Rate this product</p>
+    </div>
+
+</div>
+
+       <div class="product">
+
+    <img src="AirPods.jpg" alt="AirPods">
+
+    <h3>AirPods</h3>
+
+    <p class="old-price">₹4999</p>
+    <p class="new-price">₹2999</p>
+
+    <span class="discount">40% OFF</span>
+
+    <div class="btn-group">
+        <button onclick="addToCart('AirPods)">Add to Cart</button>
+        <button onclick="removeFromCart('AirPods')">Remove</button>
+    </div>
+
+    <button class="wishlist" onclick="addWishlist()">
+        ❤️ Wishlist
+    </button>
+
+    <div class="rating" data-product="AirPods">
+        <span onclick="rateProduct(this,1)">☆</span>
+        <span onclick="rateProduct(this,2)">☆</span>
+        <span onclick="rateProduct(this,3)">☆</span>
+        <span onclick="rateProduct(this,4)">☆</span>
+        <span onclick="rateProduct(this,5)">☆</span>
+
+        <p class="rating-text">Rate this product</p>
+    </div>
+
+</div>
+       <div class="product">
+
+    <img src="Baggy Jeans.jpg" alt="Baggy Jeans">
+
+    <h3>Baggy Jeans</h3>
+
+    <p class="old-price">₹2999</p>
+    <p class="new-price">₹1999</p>
+
+    <span class="discount">25% OFF</span>
+
+    <div class="btn-group">
+        <button onclick="addToCart('Baggy Jeans')">Add to Cart</button>
+        <button onclick="removeFromCart('Baggy Jeans')">Remove</button>
+    </div>
+
+    <button class="wishlist" onclick="addWishlist()">
+        ❤️ Wishlist
+    </button>
+
+    <div class="rating" data-product="Jeans">
+        <span onclick="rateProduct(this,1)">☆</span>
+        <span onclick="rateProduct(this,2)">☆</span>
+        <span onclick="rateProduct(this,3)">☆</span>
+        <span onclick="rateProduct(this,4)">☆</span>
+        <span onclick="rateProduct(this,5)">☆</span>
+
+        <p class="rating-text">Rate this product</p>
+    </div>
+
+</div>
+        <div class="product">
+
+    <img src="Polka dot umbrella.jpg" alt="umbrella">
+
+    <h3>umbrella</h3>
+
+    <p class="old-price">₹699</p>
+    <p class="new-price">₹499</p>
+
+    <span class="discount">40% OFF</span>
+
+    <div class="btn-group">
+        <button onclick="addToCart('umbrella')">Add to Cart</button>
+        <button onclick="removeFromCart('umbrella')">Remove</button>
+    </div>
+
+    <button class="wishlist" onclick="addWishlist()">
+        ❤️ Wishlist
+    </button>
+
+    <div class="rating" data-product="umbrella">
+        <span onclick="rateProduct(this,1)">☆</span>
+        <span onclick="rateProduct(this,2)">☆</span>
+        <span onclick="rateProduct(this,3)">☆</span>
+        <span onclick="rateProduct(this,4)">☆</span>
+        <span onclick="rateProduct(this,5)">☆</span>
+
+        <p class="rating-text">Rate this product</p>
+    </div>
+
+</div>
+       <div class="product">
+
+    <img src="Shoes.jpg" alt="Shoes">
+
+    <h3>Shoes</h3>
+
+    <p class="old-price">₹4999</p>
+    <p class="new-price">₹2999</p>
+
+    <span class="discount">50% OFF</span>
+
+    <div class="btn-group">
+        <button onclick="addToCart('')">Add to Cart</button>
+        <button onclick="removeFromCart('Shoes')">Remove</button>
+    </div>
+
+    <button class="wishlist" onclick="addWishlist()">
+        ❤️ Wishlist
+    </button>
+
+    <div class="rating" data-product="Shoes">
+        <span onclick="rateProduct(this,1)">☆</span>
+        <span onclick="rateProduct(this,2)">☆</span>
+        <span onclick="rateProduct(this,3)">☆</span>
+        <span onclick="rateProduct(this,4)">☆</span>
+        <span onclick="rateProduct(this,5)">☆</span>
+
+        <p class="rating-text">Rate this product</p>
+    </div>
+
+</div>
+       <div class="product">
+
+    <img src="Charger.jpg" alt="charger">
+
+    <h3>charger</h3>
+
+    <p class="old-price">₹5999</p>
+    <p class="new-price">₹3999</p>
+
+    <span class="discount">30% OFF</span>
+
+    <div class="btn-group">
+        <button onclick="addToCart('charger')">Add to Cart</button>
+        <button onclick="removeFromCart('charger')">Remove</button>
+    </div>
+
+    <button class="wishlist" onclick="addWishlist()">
+        ❤️ Wishlist
+    </button>
+
+    <div class="rating" data-product="charger">
+        <span onclick="rateProduct(this,1)">☆</span>
+        <span onclick="rateProduct(this,2)">☆</span>
+        <span onclick="rateProduct(this,3)">☆</span>
+        <span onclick="rateProduct(this,4)">☆</span>
+        <span onclick="rateProduct(this,5)">☆</span>
+
+        <p class="rating-text">Rate this product</p>
+    </div>
+
+</div>
+ <div class="product">
+
+    <img src="Headphone.jpg" alt="Headphone">
+
+    <h3>Headphone</h3>
+
+    <p class="old-price">₹4999</p>
+    <p class="new-price">₹2999</p>
+
+    <span class="discount">40% OFF</span>
+
+    <div class="btn-group">
+        <button onclick="addToCart('Headphone')">Add to Cart</button>
+        <button onclick="removeFromCart('Headphone')">Remove</button>
+    </div>
+
+    <button class="wishlist" onclick="addWishlist()">
+        ❤️ Wishlist
+    </button>
+
+    <div class="rating" data-product="Headphone">
+        <span onclick="rateProduct(this,1)">☆</span>
+        <span onclick="rateProduct(this,2)">☆</span>
+        <span onclick="rateProduct(this,3)">☆</span>
+        <span onclick="rateProduct(this,4)">☆</span>
+        <span onclick="rateProduct(this,5)">☆</span>
+
+        <p class="rating-text">Rate this product</p>
+    </div>
+
+</div>
+
+ <div class="product">
+
+    <img src="Retro Vintage Washed Jeans.jpg" alt="Retro Vintage Jeans">
+
+    <h3>Retro Vintage Jeans</h3>
+
+    <p class="old-price">₹3999</p>
+    <p class="new-price">₹2999</p>
+
+    <span class="discount">30% OFF</span>
+
+    <div class="btn-group">
+        <button onclick="addToCart('Retro Vintage Jeans')">Add to Cart</button>
+        <button onclick="removeFromCart('Retro Vintage Jeans')">Remove</button>
+    </div>
+
+    <button class="wishlist" onclick="addWishlist()">
+        ❤️ Wishlist
+    </button>
+
+    <div class="rating" data-product="Retro Vintage Jeans">
+        <span onclick="rateProduct(this,1)">☆</span>
+        <span onclick="rateProduct(this,2)">☆</span>
+        <span onclick="rateProduct(this,3)">☆</span>
+        <span onclick="rateProduct(this,4)">☆</span>
+        <span onclick="rateProduct(this,5)">☆</span>
+
+        <p class="rating-text">Rate this product</p>
+    </div>
+
+</div>
+
+ <div class="product">
+
+    <img src="Iphone.jpg" alt="Phone">
+
+    <h3>Phone</h3>
+
+    <p class="old-price">₹3999</p>
+    <p class="new-price">₹2999</p>
+
+    <span class="discount">30% OFF</span>
+
+    <div class="btn-group">
+        <button onclick="addToCart('Phone')">Add to Cart</button>
+        <button onclick="removeFromCart('Phone')">Remove</button>
+    </div>
+
+    <button class="wishlist" onclick="addWishlist()">
+        ❤️ Wishlist
+    </button>
+
+    <div class="rating" data-product="Phone">
+        <span onclick="rateProduct(this,1)">☆</span>
+        <span onclick="rateProduct(this,2)">☆</span>
+        <span onclick="rateProduct(this,3)">☆</span>
+        <span onclick="rateProduct(this,4)">☆</span>
+        <span onclick="rateProduct(this,5)">☆</span>
+
+        <p class="rating-text">Rate this product</p>
+    </div>
+
+</div>
+
+ <div class="product">
+
+    <img src="Top+Denim.jpg" alt="Set">
+
+    <h3>Set</h3>
+
+    <p class="old-price">₹3999</p>
+    <p class="new-price">₹2999</p>
+
+    <span class="discount">30% OFF</span>
+
+    <div class="btn-group">
+        <button onclick="addToCart('Set')">Add to Cart</button>
+        <button onclick="removeFromCart('Set')">Remove</button>
+    </div>
+
+    <button class="wishlist" onclick="addWishlist()">
+        ❤️ Wishlist
+    </button>
+
+    <div class="rating" data-product="Set">
+        <span onclick="rateProduct(this,1)">☆</span>
+        <span onclick="rateProduct(this,2)">☆</span>
+        <span onclick="rateProduct(this,3)">☆</span>
+        <span onclick="rateProduct(this,4)">☆</span>
+        <span onclick="rateProduct(this,5)">☆</span>
+
+        <p class="rating-text">Rate this product</p>
+    </div>
+
+</div>
+
+ <div class="product">
+
+    <img src="Ladies HandBag.jpg" alt="Ladies HandBag">
+
+    <h3>Ladies HandBag</h3>
+
+    <p class="old-price">₹3999</p>
+    <p class="new-price">₹2999</p>
+
+    <span class="discount">30% OFF</span>
+
+    <div class="btn-group">
+        <button onclick="addToCart('Ladies HandBag')">Add to Cart</button>
+        <button onclick="removeFromCart('Ladies HandBag')">Remove</button>
+    </div>
+
+    <button class="wishlist" onclick="addWishlist()">
+        ❤️ Wishlist
+    </button>
+
+    <div class="rating" data-product="Ladies HandBag">
+        <span onclick="rateProduct(this,1)">☆</span>
+        <span onclick="rateProduct(this,2)">☆</span>
+        <span onclick="rateProduct(this,3)">☆</span>
+        <span onclick="rateProduct(this,4)">☆</span>
+        <span onclick="rateProduct(this,5)">☆</span>
+
+        <p class="rating-text">Rate this product</p>
+    </div>
+
+</div>
+
+ <div class="product">
+
+    <img src="Short Kurti Black.jpg" alt="Short Kurti">
+
+    <h3>Short Kurti</h3>
+
+    <p class="old-price">₹3999</p>
+    <p class="new-price">₹2999</p>
+
+    <span class="discount">40% OFF</span>
+
+    <div class="btn-group">
+        <button onclick="addToCart('Short Kurti')">Add to Cart</button>
+        <button onclick="removeFromCart('Short Kurti')">Remove</button>
+    </div>
+
+    <button class="wishlist" onclick="addWishlist()">
+        ❤️ Wishlist
+    </button>
+
+    <div class="rating" data-product="Short Kurti">
+        <span onclick="rateProduct(this,1)">☆</span>
+        <span onclick="rateProduct(this,2)">☆</span>
+        <span onclick="rateProduct(this,3)">☆</span>
+        <span onclick="rateProduct(this,4)">☆</span>
+        <span onclick="rateProduct(this,5)">☆</span>
+
+        <p class="rating-text">Rate this product</p>
+    </div>
+
+</div>
+
+
+ <div class="product">
+
+    <img src="Flower Hair Clucher.jpg" alt="Clucher">
+
+    <h3>Clucher</h3>
+
+    <p class="old-price">₹3999</p>
+    <p class="new-price">₹2999</p>
+
+    <span class="discount">25% OFF</span>
+
+    <div class="btn-group">
+        <button onclick="addToCart('Clucher')">Add to Cart</button>
+        <button onclick="removeFromCart('Clucher')">Remove</button>
+    </div>
+
+    <button class="wishlist" onclick="addWishlist()">
+        ❤️ Wishlist
+    </button>
+
+    <div class="rating" data-product="Clucher">
+        <span onclick="rateProduct(this,1)">☆</span>
+        <span onclick="rateProduct(this,2)">☆</span>
+        <span onclick="rateProduct(this,3)">☆</span>
+        <span onclick="rateProduct(this,4)">☆</span>
+        <span onclick="rateProduct(this,5)">☆</span>
+
+        <p class="rating-text">Rate this product</p>
+    </div>
+
+</div>
+
+ <div class="product">
+
+    <img src="Hair dryer Set.jpg" alt="Hair Dryer Set">
+
+    <h3>Hair Dryer Set</h3>
+
+    <p class="old-price">₹3999</p>
+    <p class="new-price">₹2999</p>
+
+    <span class="discount">40% OFF</span>
+
+    <div class="btn-group">
+        <button onclick="addToCart('Hair Dryer Set')">Add to Cart</button>
+        <button onclick="removeFromCart('Hair Dryer Set')">Remove</button>
+    </div>
+
+    <button class="wishlist" onclick="addWishlist()">
+        ❤️ Wishlist
+    </button>
+
+    <div class="rating" data-product="Hair Dryer Set">
+        <span onclick="rateProduct(this,1)">☆</span>
+        <span onclick="rateProduct(this,2)">☆</span>
+        <span onclick="rateProduct(this,3)">☆</span>
+        <span onclick="rateProduct(this,4)">☆</span>
+        <span onclick="rateProduct(this,5)">☆</span>
+
+        <p class="rating-text">Rate this product</p>
+    </div>
+</div>
+
+  </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
